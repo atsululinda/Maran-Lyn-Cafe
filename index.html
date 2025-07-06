@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maran & Lyn Café</title>
+  <style>
+    :root {
+      --bg-dark: #0e0f10;
+      --bg-card: #ffffff;
+      --txt-light: #ffffff;
+      --txt-dark: #000000;
+      --txt-muted: #d0d0d0;
+      --radius: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--txt-light);
+      line-height: 1.5;
+    }
+
+    .hero {
+      position: relative;
+      background: url('background.png') center/cover no-repeat;
+      min-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 6rem 1rem 3rem;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .brand .main {
+      font-size: clamp(2.75rem, 6vw, 5rem);
+      font-weight: 900;
+    }
+
+    .brand .sub {
+      font-size: clamp(1.1rem, 2.5vw, 1.75rem);
+      letter-spacing: 0.35em;
+      margin-top: 0.25rem;
+    }
+
+    .tagline {
+      position: relative;
+      z-index: 1;
+      margin-top: 1.2rem;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--txt-muted);
+    }
+
+    .menu {
+      background: #1b1d1f;
+      padding: 4rem clamp(1rem, 5vw, 3rem) 5rem;
+      text-align: center;
+    }
+
+    .menu h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.12em;
+      margin-bottom: 3rem;
+    }
+
+    .menu-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 2.2rem 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .card {
+      background: var(--bg-card);
+      color: var(--txt-dark);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.45);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem 1.25rem 1.75rem;
+    }
+
+    .card-content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .price {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 550px) {
+      .card img {
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="brand">
+      <div class="main">MARAN &amp; LYN</div>
+      <div class="sub">CAFÉ</div>
+    </div>
+    <p class="tagline">Deliciously Kenyan. Proudly Local.</p>
+  </header>
+
+  <!-- MENU SECTION -->
+  <section class="menu" id="menu">
+    <h2>MENU</h2>
+    <div class="menu-grid">
+
+      <!-- Menu Item 1 -->
+      <article class="card">
+        <img src="chaponyama.jpeg" alt="Chapati & Nyama">
+        <div class="card-content">
+          <h3>Chapati &amp; Nyama</h3>
+          <div class="price">Ksh 300</div>
+        </div>
+      </article>
+
+      <!-- Menu Item 2 -->
+      <article class="card">
+        <img src="choma.jpeg" alt="Choma">
+        <div class="card-content">
+          <h3>Chomá (Grilled Meat)</h3>
+          <div class="price">Ksh 400</div>
+        </div>
+      </article>
+
+      <!-- Menu Item 3 -->
+      <article class="card">
+        <img src="githeri.jpeg" alt="Githeri">
+        <div class="card-content">
+          <h3>Githeri</h3>
+          <div class="price">Ksh 350</div>
+        </div>
+      </article>
+
+      <!-- Menu Item 4 -->
+      <article class="card">
+        <img src="nduma.jpeg" alt="Nduma">
+        <div class="card-content">
+          <h3>Nduma (Arrowroots)</h3>
+          <div class="price">Ksh 300</div>
+        </div>
+      </article>
+
+      <!-- Menu Item 5 -->
+      <article class="card">
+        <img src="sukuma wiki.jpeg" alt="Sukuma Wiki">
+        <div class="card-content">
+          <h3>Sukuma Wiki</h3>
+          <div class="price">Ksh 250</div>
+        </div>
+      </article>
+
+      <!-- Menu Item 6 -->
+      <article class="card">
+        <img src="ugali mix.jpeg" alt="Ugali Mix">
+        <div class="card-content">
+          <h3>Ugali Mix</h3>
+          <div class="price">Ksh 350</div>
+        </div>
+      </article>
+
+      <!-- Menu Item 7 -->
+      <article class="card">
+        <img src="ugalinyama.jpeg" alt="Ugali & Nyama">
+        <div class="card-content">
+          <h3>Ugali &amp; Nyama Combo</h3>
+          <div class="price">Ksh 400</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- OPTIONAL JS -->
+  <script>
+    // Mobile zoom effect for tapping images
+    document.querySelectorAll('.card img').forEach(img => {
+      img.addEventListener('click', () => {
+        if (window.innerWidth <= 550) {
+          img.classList.toggle('zoomed');
+          img.style.transform = img.classList.contains('zoomed') ? 'scale(1.5)' : '';
+          img.style.zIndex = img.classList.contains('zoomed') ? '2' : '';
+          img.style.cursor = 'pointer';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
